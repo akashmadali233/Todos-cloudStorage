@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+
+</head>
+<body>
+    <form onsubmit="handleform(event)">
+        <h3>ToDos Today</h3>
+        <hr>
+        <label for="task">Task</label>
+        <input id="task" name="task" type="text">
+
+        <label for="des">Description</label>
+        <input id="des" name="des" type="text">
+
+        <button type="submit">Add</button>
+    </form>
+
+    <form id="todoForm" onsubmit="submitForm(event)">
+        <ul id="unorderList"></ul>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Section to display "Do" details -->
+    <div id="doSection">
+        <h2>Do Section</h2>
+        <hr>
+        <div id="doDetails"></div>
+    </div>
+
+    <!-- Section to display "Not Do" details -->
+    <div id="notDoSection">
+        <h2>Not Do Section</h2>
+        <hr>
+        <div id="notDoDetails"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="project.js"></script>
+</body>
+</html>
